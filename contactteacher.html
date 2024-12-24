@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Teacher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://i.ibb.co/t3rgJD8/pexels-jplenio-1103970.jpg"); /* Set background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 60%; /* Set width to 40% */
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #007bff; /* Blue heading */
+  font-weight: bold; /* Make heading bold */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555; /* Darker gray for labels */
+  font-weight: bold; /* Make labels bold */
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center; /* Center text within input fields */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+}
+
+.go-to-chat-button {
+  padding: 15px 30px;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease; 
+  margin-bottom: 10px; /* Add space between buttons */ 
+}
+
+.go-to-chat-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #28a745; /* Green */ 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease; 
+}
+
+.back-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Child's Details</h2>
+  <div class="form-group">
+    <label class="form-label" for="childName">Child's Name:</label>
+    <input type="text" id="childName" class="form-input" required placeholder="Enter Child's Name">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="childClass">Child's Class:</label>
+    <input type="text" id="childClass" class="form-input" required placeholder="Enter Child's Class">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="childSchool">Child's School:</label>
+    <input type="text" id="childSchool" class="form-input" required placeholder="Enter Child's School">
+  </div>
+
+  <div class="buttons"> 
+    <button class="go-to-chat-button" onclick="openWhatsAppWithDetails()">Go to Chat</button>
+    <a href="index.html" class="back-button">Go Back</a> 
+  </div>
+
+</div>
+
+<script>
+function openWhatsAppWithDetails() {
+  const childName = document.getElementById('childName').value;
+  const childClass = document.getElementById('childClass').value;
+  const childSchool = document.getElementById('childSchool').value;
+
+  // Validate input (optional)
+  if (!childName || !childClass || !childSchool) {
+    alert("Please fill in all the details.");
+    return;
+  }
+
+  const message = `Child's Name: ${childName}\nChild's Class: ${childClass}\nChild's School: ${childSchool}`;
+  const url = `https://wa.me/+918208157423?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
