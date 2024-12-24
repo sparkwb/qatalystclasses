@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out Our Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Importing Roboto Bold -->
+    <link rel="icon" href="https://i.ibb.co/NTvQJ90/web-1.png" type="image/png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.ibb.co/YT0dNkK/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner-1258-800.jpg'); /* Pexels background image */
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        header, footer {
+            background: linear-gradient(90deg, rgba(0, 0, 50, 0.8), rgba(0, 0, 100, 0.8)); /* Black to blue gradient */
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button-container a {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px 0;
+            width: 200px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #0056b3;
+        }
+        footer p, footer a {
+            font-size: 0.9em;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script>
+        function showAndroidMessage() {
+            alert("Android Apps are under Development. May be Updated In Future.");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Select App Type:-</h1>
+    </header>
+
+    <div class="button-container">
+        <a href="webapps.html">Web Apps</a>
+        <a href="#" onclick="showAndroidMessage()">Android Apps</a>
+    </div>
+
+    <footer>
+        <p>Made By <a href="https://github.com/sparkwb" target="_blank">SparkWb</a></p>
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>
